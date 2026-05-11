@@ -6,7 +6,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<ReviewFunnel />} />
+        <Route path="review" element={<ReviewFunnel />} />
+        <Route path="/" element={<h1>Welcome to the Review Funnel</h1>} />
       </Routes>
     </Router>
   )
