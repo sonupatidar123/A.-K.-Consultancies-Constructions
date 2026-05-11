@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Star, Copy, MapPin, Phone, Check } from 'lucide-react';
 import './ReviewFunnel.css'; // Import the CSS file
 
-const BRAND_NAME = "A. K. Consultancies & Constructions";
-const PHONE_NUMBER = "+91 98273 54719";
+const BRAND_NAME = import.meta.env.VITE_BRAND_NAME;
+const PHONE_NUMBER = import.meta.env.VITE_PHONE_NUMBER;
 const SUGGESTED_REVIEWS = [
   "Had a great experience with A. K. Consultancies & Constructions in Indore. Their architectural design ideas are modern, practical, and perfectly suited to client requirements. Highly recommended for residential and commercial projects.",
   "One of the best architecture firms in Indore. The team provided excellent building planning and 3D visualization services for our dream home. Very professional approach and timely support.",
@@ -36,7 +36,7 @@ const ReviewFunnel = () => {
   const [feedback, setFeedback] = useState({ name: '', text: '' });
   const [status, setStatus] = useState('idle');
 
-  const GOOGLE_MAPS_LINK = "https://www.google.com/search?sca_esv=00b01663e52f5fc5&sxsrf=ANbL-n7ORfOg1952IjJXcqeqD2wiQKYWpQ:1778434088926&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qORabJDcP1ljGD_x8lOn6b5MgbOKgnaGglesnWATdlSWEkKptnSd6Mq5fpx2ZmT_8v22SLVyPMt75ghkHSHhq3ciDkhCtWWiokeeKHxO7qA--GW2HVmYDVRwoDAD-CS12vkGhTiE%3D&q=A.+K.+Consultancies+%26+Constructions+Reviews&sa=X&ved=2ahUKEwie2IGhn6-UAxVCr1YBHcdHHfoQ0bkNegQIMxAH&biw=1600&bih=765&dpr=1#lrd=0x3962fd80001c4c05:0xa12cde99a5d1e5ad,3,,,,";
+  const GOOGLE_MAPS_LINK = import.meta.env.VITE_GOOGLE_MAPS_LINK;
   
   const handleRatingClick = (selectedRating) => {
     setRating(selectedRating);
